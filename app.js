@@ -52,7 +52,7 @@ app.post("/", function(req, res) {
 app.post("/failure", function(req, res) {
   res.redirect('/');
 });
-app.listen((process.evn.PORT), function() {
+app.listen(process.env.PORT, function() {
   console.log("The server is running on port 3000");
 });
 
