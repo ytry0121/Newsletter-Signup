@@ -52,9 +52,10 @@ app.post("/", function(req, res) {
 app.post("/failure", function(req, res) {
   res.redirect('/');
 });
-var port = process.env.PORT || 3000;
-app.listen(port, function() {
-  console.log("The server is running on port 3000");
+const PORT = process.env.PORT || 3000;
+console.log("PORT :"+process.env.PORT);
+app.listen(PORT, function() {
+  console.log("The server is running on port "+ PORT);
 });
 
 //API key
