@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 app.get("/", function(req, res) {
-  res.sendFile(__dirname + "\\signup.html");
+  res.sendFile(__dirname + "/signup.html");
 });
 
 app.post("/", function(req, res) {
@@ -42,9 +42,9 @@ app.post("/", function(req, res) {
     if (error) {
       res.send("There was error");
     } else if (response.statusCode === 200) {
-      res.sendFile(__dirname + "\\success.html");
+      res.sendFile(__dirname + "/success.html");
     } else {
-      res.sendFile(__dirname + "\\failure.html");
+      res.sendFile(__dirname + "/failure.html");
     }
   });
 });
